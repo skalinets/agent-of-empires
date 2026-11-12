@@ -3516,7 +3516,7 @@ impl HomeView {
             ActionId::NewSession => self.open_new_session_dialog(),
             ActionId::NewFromSelection => {
                 if self.cursor_suggestion().is_some() {
-                    self.open_new_session_dialog();
+                    self.start_another_from_suggestion();
                 } else {
                     self.open_new_from_selection();
                 }
